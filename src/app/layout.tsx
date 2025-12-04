@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100">
+      <body>
         <Header />
         <main className="p-6">{children}</main>
       </body>

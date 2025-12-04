@@ -1,0 +1,19 @@
+'use client';
+
+export default function OAuthGoogleButton() {
+  const handleGoogleAuth = () => {
+    const base = process.env.NEXT_PUBLIC_API_URL;
+    const url = `${base}/auth/google`;
+
+    window.location.href = url;
+  };
+
+  return (
+    <button
+      onClick={handleGoogleAuth}
+      className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+    >
+      <span>Continue with Google</span>
+    </button>
+  );
+}
