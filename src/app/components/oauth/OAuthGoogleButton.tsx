@@ -5,7 +5,19 @@ export default function OAuthGoogleButton() {
     const base = process.env.NEXT_PUBLIC_API_URL;
     const url = `${base}/auth/google`;
 
-    window.location.href = url;
+    // if (!base) {
+    //   console.error('API URL not configured');
+    //   return;
+    // }
+
+    // window.location.href = url;
+    console.log(url);
+    try {
+      window.location.href = url;
+    } catch (error) {
+      console.log('Не удалось перейти:', error);
+      alert('Ссылка не работает');
+    }
   };
 
   return (
