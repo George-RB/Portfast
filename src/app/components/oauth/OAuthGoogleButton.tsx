@@ -1,5 +1,5 @@
 'use client';
-import Link from 'next/link';
+import ButtonLink from '../ui/ButtonLink';
 
 export default function OAuthGoogleButton() {
   const handleGoogleAuth = () => {
@@ -22,19 +22,15 @@ export default function OAuthGoogleButton() {
   };
 
   return (
-    <div className="space-y-4 flex flex-col text-center">
+    <div className="space-y-4 flex flex-col text-center items-center">
       <button
         onClick={handleGoogleAuth}
         className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
       >
         <span>Continue with Google</span>
       </button>
-      <Link
-        href="/"
-        className="bg-amber-300 text-gray-900 rounded-xl px-4 py-2 hover:bg-amber-500"
-      >
-        Back to main page
-      </Link>
+
+      <ButtonLink href="/"> Главная </ButtonLink>
     </div>
   );
 }
