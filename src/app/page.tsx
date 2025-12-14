@@ -19,6 +19,13 @@ export default function HomePage() {
         >
           Перейти на Hello
         </Link>
+
+        <Link
+          href="/editor"
+          className="px-6 py-3 bg-gray-500 rounded-lg hover:bg-gray-400 transition"
+        >
+          Редактор
+        </Link>
       </div>
     </div>
   );

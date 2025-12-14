@@ -10,7 +10,10 @@ export default function Header() {
       <Link href="/hello" className="hover:underline">
         Hello
       </Link>
-      {/* Portfast */}
+
+      <Link href="/editor" className="hover:underline">
+        Редактор
+      </Link>
     </header>
   );
 }
